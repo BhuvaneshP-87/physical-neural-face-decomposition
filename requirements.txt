@@ -1,0 +1,16 @@
+numpy
+torch
+opencv-python
+matplotlib
+imageio
+jupyter
+scikit-image
+torchvision
+
+# Optional research dependencies
+# mitsuba
+# drjit
+# pytorch3d
+# wandb
+# lpips
+

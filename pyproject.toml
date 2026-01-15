@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physical-neural-face-decomposition"
+version = "0.1.0"
+description = "Research-inspired facial inverse rendering with a physical renderer and neural residual appearance model."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy",
+  "torch",
+  "opencv-python",
+  "matplotlib",
+  "imageio",
+  "jupyter",
+  "scikit-image",
+  "torchvision",
+]
+
+[project.optional-dependencies]
+render = ["mitsuba", "drjit"]
+pytorch3d = ["pytorch3d"]
+experiment = ["wandb", "lpips"]
+dev = ["pytest", "ruff", "black"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
